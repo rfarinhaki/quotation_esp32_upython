@@ -13,18 +13,15 @@ def toggle_led():
         led.off()
     else:
         led.on()
-        
+
 def turnon_led():
     led.on()
-        
+
 def start_timer2():
     print("Starting timer 2...")
     t2 = Timer(-1)
     t2.init(period=1000, mode=Timer.PERIODIC, callback=lambda t:toggle_led())
 
-#print("Starting timer 1")
-#t1 = Timer(-1)
-#t1.init(period=8000, mode=Timer.ONE_SHOT, callback=lambda t:start_timer2())
 
 def set_time(timezone):
     ntptime.settime()
